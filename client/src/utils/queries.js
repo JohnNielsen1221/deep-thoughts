@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const QUERY_THOUGHT = gql`
+export const QUERY_THOUGHTS = gql`
   query thought($id: ID!) {
     thought(_id: $id) {
       _id
