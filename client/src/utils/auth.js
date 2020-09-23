@@ -6,7 +6,7 @@ class AuthService {
         return decode(this.getToken());
     }
 
-    // check if the user is still logged in
+    //check if the user is still logged in
     loggedIn() {
         // Checks if there is a saved token and it's still valid
         const token = this.getToken();
@@ -27,16 +27,15 @@ class AuthService {
             return false;
         }
     }
-
     // retrieve token from localStorage
     getToken() {
         // Retrieves the user token from localStorage
-        return localStorage.getItem('id_token');
+        return localStorage.getItem('id_token'); 
     }
 
     // set token to localStorage and reload page to homepage
     login(idToken) {
-        // Saves user token to localStorage
+        // Saves user token and reload pafe to homepage
         localStorage.setItem('id_token', idToken);
 
         window.location.assign('/');
